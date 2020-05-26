@@ -1,4 +1,4 @@
-package com.example;
+package com.example.demo;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -10,5 +10,9 @@ public class StringCalculatorTest {
 	@Test
 	public void shouldReturnZeroOnEmptyString() {
 		assertEquals(0,StringCalculator.addString(""));
+	}
+	@Test
+	public void shouldReturnNumberOnNumber() {
+		assertEquals(1,StringCalculator.addString("1"));
 	}
 }
