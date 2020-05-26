@@ -3,15 +3,17 @@ package com.example.demo;
 public class StringCalculator {
 
 	public static int addString(String text) {
-		int sum=0;
 		if(text.isEmpty()) {
 		return 0;
-		}else {
+		}else if(text.contains(",")) {
 			String[] tokens =text.split(",");
-			for (String token : tokens) {
-				sum=sum+Integer.parseInt(token);
-			}
-			return sum;
+			return toInt(tokens[0]+tokens[1]);
+		}else {
+			return toInt(text);
 		}
+	}
+
+	private static int toInt(String text) {
+		return Integer.parseInt(text);
 	}
 }
