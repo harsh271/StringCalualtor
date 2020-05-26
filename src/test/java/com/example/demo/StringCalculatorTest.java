@@ -15,4 +15,8 @@ public class StringCalculatorTest {
 	public void shouldReturnNumberOnNumber() {
 		assertEquals(1,StringCalculator.addString("1"));
 	}
+	@Test
+	public void shouldReturnSumOnTwonumbersDelimitedBycomma() {
+		assertEquals(3,StringCalculator.addString("1,2"));
+	}
 }
