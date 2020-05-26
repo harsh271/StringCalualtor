@@ -7,7 +7,7 @@ public class StringCalculator {
 		return 0;
 		}else if(text.contains(",")) {
 			String[] tokens =text.split(",");
-			return toInt(tokens[0]+tokens[1]);
+			return toInt(tokens[0])+toInt(tokens[1]);
 		}else {
 			return toInt(text);
 		}
