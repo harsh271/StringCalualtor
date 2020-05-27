@@ -3,7 +3,7 @@
  */
 package com.example.demo;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
@@ -64,5 +64,12 @@ class LeapYearTest {
 		Check_Leap_Year.checkleapYear(1900);
 		Check_Leap_Year.checkleapYear(2100);
 		assertEquals(false,false,"all the inputs are not divisible by 400 but divisible by 100 hence not a leap year");
+	}
+	@Test
+	void shouldReturnLeapYearIfNotDivisibleBy100butDivisbleby4(){
+		Check_Leap_Year.checkleapYear(2008);
+		 Check_Leap_Year.checkleapYear(2012);
+		 Check_Leap_Year.checkleapYear(2016);
+		 assertEquals(true,false,"all the inputs are not divisible by 100 but divisible by 4 hence a leap year");
 	}
 }
