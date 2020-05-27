@@ -47,7 +47,7 @@ public class StringCalculatorTest {
 	}
 	@Test
 	public void shouldNotAddNumberBiggerThenThousandIfPresentinString() {
-		assertEquals("2",StringCalculator.addString("2,1000"));
+		assertEquals(2,StringCalculator.addString("1001,2"));
 		
 	}
 	
