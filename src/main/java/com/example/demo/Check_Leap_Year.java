@@ -10,6 +10,8 @@ public class Check_Leap_Year {
 		}
 		else if(year%4==0) {
 			flag = true;
+		}else {
+			flag=false;
 		}
 
 		return flag;
