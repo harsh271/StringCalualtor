@@ -35,6 +35,14 @@ public class StringCalculatorTest {
 	public void customDelimeterCouldAlsoARegExpSpecialChar() {
 		assertEquals(3,StringCalculator.addString("//.\n1.2"));
 	}
+	@Test
+	public void throwExceptionOnNegatives() {
+		try {
+			StringCalculator.addString("-1,-2,-3");
+			
+		} catch (Exception e) {
+		}
+	}
 	
 	
 }
