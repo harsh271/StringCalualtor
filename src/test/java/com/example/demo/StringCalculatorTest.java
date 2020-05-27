@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -39,7 +40,7 @@ public class StringCalculatorTest {
 	public void throwExceptionOnNegatives() {
 		try {
 			StringCalculator.addString("-1,-2,-3");
-			
+			fail("Exception Should Be Thrown");
 		} catch (Exception e) {
 		}
 	}
