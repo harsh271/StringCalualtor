@@ -3,12 +3,7 @@ package com.example.demo;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 public class StringCalculator {
-	static Logger logger = LoggerFactory.getLogger(StringCalculator.class);
-
 	public static int addString(String text) {
 			int sum = 0;
 			if(text.isEmpty()) {

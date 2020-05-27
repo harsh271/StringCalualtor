@@ -3,6 +3,8 @@ package com.example.demo;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
+import java.io.Console;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -50,6 +52,7 @@ public class StringCalculatorTest {
 		assertEquals(2,StringCalculator.addString("1001,2"));
 		
 	}
+	
 	
 	
 }
