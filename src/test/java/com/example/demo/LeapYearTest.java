@@ -49,14 +49,20 @@ class LeapYearTest {
 
 	@Test
 	void testCheckLeapYearIfDivisibleby400ForPostiveInput() {
-		Check_Leap_Year check_Leap_Year = new Check_Leap_Year();
-		check_Leap_Year.checkleapYear(2000);
+		Check_Leap_Year.checkleapYear(2000);
 		assertEquals(true,true,"2000 is divisible by 400 hence leap year");
 	}
 	@Test
 	void testCheckLeapYearIfDivisibleby400ForNegativeInput() {
-		Check_Leap_Year check_Leap_Year = new Check_Leap_Year();
-		check_Leap_Year.checkleapYear(2005);
+		Check_Leap_Year.checkleapYear(2005);
 		assertEquals(false,false,"2005 is  not divisible by 400 hence not a  leap year");
+	}
+	@Test
+	void ShouldReturnNotaLeapYearIfNotDivisibleBy400ButDivisibleBy100() {
+		Check_Leap_Year.checkleapYear(700);
+		Check_Leap_Year.checkleapYear(1800);
+		Check_Leap_Year.checkleapYear(1900);
+		Check_Leap_Year.checkleapYear(2100);
+		assertEquals(false,false,"all the inputs are not divisible by 400 but divisible by 100 hence not a leap year");
 	}
 }
