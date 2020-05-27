@@ -10,20 +10,23 @@ public class StringCalculator {
 	static Logger logger = LoggerFactory.getLogger(StringCalculator.class);
 
 	public static int addString(String text) {
-		int sum = 0;
-		try {
+			int sum = 0;
+			if(text.isEmpty()) {
+				return 0;
+			}
 			String[] tokens = tokenize(text);
 			for (String token : tokens) {
 				int i = Integer.parseInt(token);
+				if(i<0) {
+					throw new RuntimeException("Negative Not allowed"+i);
+				}
 				sum = sum + i;
 			}
-		} catch (Exception e) {
-			logger.warn("Invalid Input");
-		}
 		return sum;
 	}
 
 	private static String[] tokenize(String text) {
+		
 		if (text.startsWith("//")) {
 			Matcher m = Pattern.compile("//(.)\n(.*)").matcher(text);
 			m.matches();

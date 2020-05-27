@@ -34,7 +34,7 @@ public class StringCalculatorTest {
 	}
 	@Test
 	public void customDelimeterCouldAlsoARegExpSpecialChar() {
-		assertEquals(3,StringCalculator.addString("//.\n1.2"));
+		assertEquals(3,StringCalculator.addString("//.\n1.2"),"Test Succeed");
 	}
 	@Test
 	public void throwExceptionOnNegatives() {
@@ -42,7 +42,13 @@ public class StringCalculatorTest {
 			StringCalculator.addString("-1,-2,-3");
 			fail("Exception Should Be Thrown");
 		} catch (Exception e) {
+			assertEquals(RuntimeException.class,e.getClass(),e.getMessage());
 		}
+	}
+	@Test
+	public void shouldNotAddNumberBiggerThenThousandIfPresentinString() {
+		assertEquals("2",StringCalculator.addString("2,1000"));
+		
 	}
 	
 	
