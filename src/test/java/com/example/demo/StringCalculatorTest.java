@@ -33,7 +33,7 @@ public class StringCalculatorTest {
 	}
 	@Test
 	public void customDelimeterCouldAlsoARegExpSpecialChar() {
-		assertEquals(3,StringCalculator.addString("//.\n1.2"),"A RegExpSpecialChar Not Supported");
+		assertEquals(3,StringCalculator.addString("//.\n1.2"));
 	}
 	
 	

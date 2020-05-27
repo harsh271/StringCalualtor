@@ -29,7 +29,7 @@ public class StringCalculator {
 			m.matches();
 			String customDelimeter = m.group(1);
 			String numbers = m.group(2);
-			return numbers.split(customDelimeter);
+			return numbers.split(Pattern.quote(customDelimeter));
 		} else {
 			return text.split(",|\n");
 		}
