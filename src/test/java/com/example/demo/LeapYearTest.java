@@ -72,4 +72,11 @@ class LeapYearTest {
 		 Check_Leap_Year.checkleapYear(2016);
 		 assertEquals(true,true,"all the inputs are not divisible by 100 but divisible by 4 hence a leap year");
 	}
+	@Test
+	void shouldReturnNotLeapYear100IfNotDivided4Either(){
+		 Check_Leap_Year.checkleapYear(2017);
+		 Check_Leap_Year.checkleapYear(2018);
+		 Check_Leap_Year.checkleapYear(2019);
+		 assertEquals(false,true,"all the inputs are not divisible by 100 but divisible by 4 hence a leap year");
+	}
 }
